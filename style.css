@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ADD8E6; /* Azul claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura total */
+}
+
+h1 {
+    color: #0056b3;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.pix-info-section {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.info-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+}
+
+.info-group:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.info-group label {
+    font-weight: bold;
+    color: #444;
+    flex-shrink: 0; /* Não encolhe o label */
+    margin-right: 15px; /* Espaço entre label e dado */
+}
+
+.pix-data {
+    font-size: 1.05em;
+    color: #212529;
+    word-break: break-all; /* Quebra o texto se for muito longo */
+    text-align: right; /* Alinha o dado à direita */
+    flex-grow: 1; /* Permite que o dado ocupe o espaço restante */
+}
+
+/* Estilo para o botão de confirmação (agora um link) */
+.confirm-button {
+    background-color: #ffffff; /* Fundo branco */
+    color: #007bff; /* Texto azul para contraste */
+    padding: 15px 30px;
+    border: 2px solid #007bff; /* Borda azul para destaque */
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+    margin-top: 20px;
+    text-decoration: none; /* Remove sublinhado padrão de links */
+    display: inline-block; /* Permite aplicar padding e margin como um bloco */
+}
+
+.confirm-button:hover {
+    background-color: #e6f2ff; /* Um azul bem clarinho ao passar o mouse */
+    color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Estilos específicos para a página de sucesso */
+.success-container h1.success-message {
+    color: #28a745; /* Verde para a mensagem de sucesso */
+    font-size: 2.5em; /* Tamanho maior para destaque */
+    margin-bottom: 30px;
+}
+
+.success-container p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.back-button {
+    background-color: #6c757d; /* Cinza para o botão de voltar */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .success-container h1.success-message {
+        font-size: 2em; /* Ajusta para telas menores */
+    }
+
+    .info-group {
+        flex-direction: column; /* Empilha label e dado em telas pequenas */
+        align-items: flex-start;
+    }
+
+    .info-group label {
+        margin-right: 0;
+        margin-bottom: 5px; /* Espaço abaixo do label */
+    }
+
+    .pix-data {
+        text-align: left; /* Alinha o dado à esquerda */
+        width: 100%; /* Ocupa toda a largura */
+    }
+  
+}
